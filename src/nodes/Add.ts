@@ -3,13 +3,17 @@ import { IBaseNode } from "../utils/IBaseNode";
 export default class ADD extends IBaseNode{
     
 
-    constructor(){
-        super();
-        console.log("node ADD inited Succefully")
+    constructor(name:string){
+
+        const inputs = ["number","number"];
+        super(name,{inputs});
+        this.log("node ADD inited Succefully")
     }
     
     run(input1:number,input2:number){
-        return input1+input2
+        const result = input1+input2
+        this.log(result+'');
+        return  result
     }
     
     validate(...args:any[])
