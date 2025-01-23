@@ -30,11 +30,11 @@ export class Engine {
     }
     async run(worflow:string[][]){
         const ram = new Ram(); 
-        console.log(worflow)
         for(let i=0;i<worflow.length;i++)
         {
             for(let j=0;j<worflow[i].length;j++)
             {
+                
                 const node = this.nodes.find((n)=>n.id === worflow[i][j]);
                 if(node)
                 await node?.node.execute(ram);

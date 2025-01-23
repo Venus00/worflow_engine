@@ -24,6 +24,7 @@ class IBaseNode {
     execute(ram) {
         return __awaiter(this, void 0, void 0, function* () {
             let args = [];
+            console.log(ram);
             for (let i = 0; i < this.options.inputs.length; i++) {
                 args.push(ram.take());
             }

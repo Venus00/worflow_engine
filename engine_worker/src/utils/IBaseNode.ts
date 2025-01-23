@@ -18,6 +18,7 @@ export class IBaseNode {
     }
     async execute(ram:Ram){
         let args:any[] = [];
+        console.log(ram)
         for(let i=0;i<this.options.inputs.length;i++)
         {
             args.push(ram.take());

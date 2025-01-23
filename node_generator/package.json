@@ -4,15 +4,19 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "build": "webpack",
+    "build": "node build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.7.9"
+    "@google-cloud/local-auth": "^3.0.1",
+    "@types/axios": "^0.14.4",
+    "axios": "^1.7.9",
+    "googleapis": "^144.0.0"
   },
   "devDependencies": {
+    "esbuild": "0.24.2",
     "ts-loader": "^9.5.2",
     "typescript": "^5.7.3",
     "webpack": "^5.97.1",

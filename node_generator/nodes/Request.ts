@@ -11,13 +11,17 @@ export default class Request extends IBaseNode{
         this.log("node Request inited Succefully")
     }
     
-    async run(input1:number,input2:number){
-        return axios.get(this.url)
+    async run(){
+        try {
+            return  (await axios.get(this.url)).data 
+        } catch (error) {
+            throw new Error("error get Request");
+        }
+       
     }
     
     validate(...args:any[])
     {
-
         return true;
     }
 }

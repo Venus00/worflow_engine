@@ -4,13 +4,13 @@ export class Ram {
     constructor(){}
 
     push(element:any){
-        console.log(this.ram);
+        console.log("ram add this : ",element);
         this.ram.push(element)
     }
     
     take()
     {
-        console.log(this.ram);
+        console.log("state ram now : ",this.ram);
         if(this.ram.length === 0) throw new Error("ram overtake");
         return this.ram.pop();
     }

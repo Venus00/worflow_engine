@@ -65,7 +65,6 @@ class Engine {
     run(worflow) {
         return __awaiter(this, void 0, void 0, function* () {
             const ram = new Ram_1.Ram();
-            console.log(worflow);
             for (let i = 0; i < worflow.length; i++) {
                 for (let j = 0; j < worflow[i].length; j++) {
                     const node = this.nodes.find((n) => n.id === worflow[i][j]);
