@@ -20,6 +20,32 @@ export interface Nodes {
 
 
 
+export const asyncWorkflow = {
+    nodes:[
+        {
+            type:'Request',
+            uuid:'0010',
+            properties:{
+                url:"http://127.0.0.1:3000"
+            }
+        },
+        {
+            type:'Delay',
+            uuid:'0009',
+            properties:{
+                'timeout':6000
+            }
+        },
+    ],
+    connections:[
+        ["0001","0002"],
+        ["0002","0003"],
+        ["0003","0004"],
+        ["0002","0007"],
+        ["0005","0006"],
+    ]
+}
+
 export const data = {
     nodes:[
         {

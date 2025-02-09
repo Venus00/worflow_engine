@@ -15,3 +15,21 @@ export class Ram {
         return this.ram.pop();
     }
 }
+
+export class Queue {
+    private queue:any[] = [];
+
+    constructor(){}
+    push(element:any){
+        console.log(this.queue);
+        this.queue.push(element)
+    }
+    
+    take()
+    {
+        console.log(this.queue);
+        if(this.queue.length === 0) throw new Error("queue overtake");
+        return this.queue.pop();
+    }
+    
+}

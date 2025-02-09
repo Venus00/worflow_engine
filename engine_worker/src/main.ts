@@ -1,14 +1,12 @@
-import { Engine } from "./utils/Engine";
-import {parse} from 'ts-command-line-args';
-import { data } from "./utils/INodes";
+import { asyncWorkflow } from "./utils/INodes";
+import { EngineAsync } from './utils/EngineAsync';
 async function main() {
 
-    const args = parse({
-        dir:String,
-    });
-
-    const engine = new Engine();
-    const workflow = await engine.init(args.dir,data);
+    // const args = parse({
+    //     dir:String,
+    // });
+    const engine = new EngineAsync();
+    const workflow = await engine.init("F:\\nextronic\\worflow_engine\\nodes",asyncWorkflow);
     engine.run(workflow);
 }
 
